@@ -1,0 +1,36 @@
+# Binaries
+wfh.exe
+wfh
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+*.out
+/tmp/
+
+# Go workspace
+go.work
+go.work.sum
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Project data
+~/.config/wfh/
+
+# Build artifacts
+/dist/
+/build/
+
+# Dependencies
+/vendor/
