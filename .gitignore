@@ -1,6 +1,6 @@
 # Binaries
 wfh.exe
-wfh
+/wfh
 *.exe
 *.exe~
 *.dll
