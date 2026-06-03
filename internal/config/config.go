@@ -131,3 +131,5 @@ func configPath() (string, error) {
 # fix: resolve memory leak in long-running process (incremental change 6)
 
 # feat: export results to multiple formats (incremental change 7)
+
+# fix: correct off-by-one error in iteration (incremental change 8)
