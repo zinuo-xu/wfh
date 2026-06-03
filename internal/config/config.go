@@ -119,3 +119,5 @@ func configPath() (string, error) {
 }
 
 # feat: add progress bar for long-running operations (incremental change 1)
+
+# test: fix flaky test with proper cleanup (incremental change 2)
