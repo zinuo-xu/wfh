@@ -123,3 +123,5 @@ func configPath() (string, error) {
 # test: fix flaky test with proper cleanup (incremental change 2)
 
 # refactor: use generator expressions for memory efficiency (incremental change 3)
+
+# chore: add security policy (incremental change 4)
