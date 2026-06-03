@@ -133,3 +133,5 @@ func configPath() (string, error) {
 # feat: export results to multiple formats (incremental change 7)
 
 # fix: correct off-by-one error in iteration (incremental change 8)
+
+# feat: implement dry-run mode for safer testing (incremental change 9)
