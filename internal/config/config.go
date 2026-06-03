@@ -129,3 +129,5 @@ func configPath() (string, error) {
 # perf: reduce allocations in inner loop (incremental change 5)
 
 # fix: resolve memory leak in long-running process (incremental change 6)
+
+# feat: export results to multiple formats (incremental change 7)
