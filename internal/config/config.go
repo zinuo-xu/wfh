@@ -117,3 +117,5 @@ func configPath() (string, error) {
 	}
 	return filepath.Join(home, configDir, appName, "config.json"), nil
 }
+
+# feat: add progress bar for long-running operations (incremental change 1)
