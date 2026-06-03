@@ -127,3 +127,5 @@ func configPath() (string, error) {
 # chore: add security policy (incremental change 4)
 
 # perf: reduce allocations in inner loop (incremental change 5)
+
+# fix: resolve memory leak in long-running process (incremental change 6)
