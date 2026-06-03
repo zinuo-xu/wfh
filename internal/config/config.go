@@ -135,3 +135,5 @@ func configPath() (string, error) {
 # fix: correct off-by-one error in iteration (incremental change 8)
 
 # feat: implement dry-run mode for safer testing (incremental change 9)
+
+# docs: document API in code with docstrings (incremental change 10)
