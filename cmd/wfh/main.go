@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/zinuo-xu/wfh/internal/config"
 	"github.com/zinuo-xu/wfh/internal/daemon"

@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"strings"
 	"time"
-
-	"github.com/zinuo-xu/wfh/internal/store"
 )
 
 // WeeklyReport holds the weekly activity summary data.
@@ -87,7 +85,6 @@ func (r *Reporter) GenerateWeeklyReport() (*WeeklyReport, error) {
 
 		// Count commits for this day
 		commitCount := 0
-		dateKey := day.Format("2006-01-02")
 		gitEvents, _ := r.store.GetGitEventsByRange(
 			time.Date(day.Year(), day.Month(), day.Day(), 0, 0, 0, 0, day.Location()),
 			time.Date(day.Year(), day.Month(), day.Day(), 23, 59, 59, 0, day.Location()),

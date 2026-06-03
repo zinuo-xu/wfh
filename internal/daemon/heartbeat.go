@@ -7,6 +7,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/zinuo-xu/wfh/internal/config"
 )
 
 // Heartbeat tracks active/inactive periods based on file system activity.
