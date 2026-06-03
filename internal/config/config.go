@@ -125,3 +125,5 @@ func configPath() (string, error) {
 # refactor: use generator expressions for memory efficiency (incremental change 3)
 
 # chore: add security policy (incremental change 4)
+
+# perf: reduce allocations in inner loop (incremental change 5)
