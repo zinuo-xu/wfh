@@ -1,0 +1,75 @@
+# GoReleaser configuration for wfh.
+# Build once, release everywhere — privacy preserved.
+version: 2
+
+project_name: wfh
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: wfh
+    main: ./cmd/wfh
+    binary: wfh
+    ldflags:
+      - -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}}
+    env:
+      - CGO_ENABLED=1
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ignore:
+      - goos: windows
+        goarch: arm64
+      - goos: darwin
+        goarch: amd64
+        goarm: 7
+
+archives:
+  - id: default
+    format: tar.gz
+    format_overrides:
+      - goos: windows
+        format: zip
+    files:
+      - LICENSE
+      - README.md
+      - CHANGELOG.md
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+
+checksum:
+  name_template: "{{ .ProjectName }}_{{ .Version }}_checksums.txt"
+
+snapshot:
+  name_template: "{{ .Tag }}-next"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^ci:"
+
+release:
+  github:
+    owner: zinuo-xu
+    name: wfh
+  draft: false
+  prerelease: auto
+
+brews:
+  - name: wfh
+    repository:
+      owner: zinuo-xu
+      name: homebrew-wfh
+    homepage: "https://github.com/zinuo-xu/wfh"
+    description: "Privacy-first WFH activity tracker. All data local, no telemetry."
+    license: "MIT"
+    test: |
+      system "#{bin}/wfh version"
